@@ -1,8 +1,9 @@
 H=[ 1 1 0 1 0 0; 1 1 1 0 0 1 ; 0 1 1 0 1 0 ]
-the_indicator_matrix=zeros(3,6);
 the_codeword=[0 1 1 1 0 1];
+h_size=size(H);
+the_indicator_matrix=zeros(h_size(1),h_size(2));
 
-for i=1:3
+for i=1:h_size(1)
     i_row_ones= find(H(i,:));
     %find all the connections in to the checknode i
     the_i_row_xor=0;
@@ -14,13 +15,10 @@ for i=1:3
    end
 end
     the_indicator_matrix
-    %everything okay upto here
     
-for i=1:6
+for i=1:h_size(2)
     i_i_row_ones=find(H(:,i));
-    %this gives all the connections to a ith variable node
     the_sum_of_the_ones=0;
-    
     for j=1:numel(i_i_row_ones)
         the_sum_of_the_ones=the_sum_of_the_ones+the_indicator_matrix(i_i_row_ones(j),i);
     end
