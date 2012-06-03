@@ -3,9 +3,9 @@ h_size=size(H);
 the_codeword=zeros(1,h_size(2));
 
 %form the vector for cross over probablilty
-the_cross_over_probability=zeros(0,99);
-for k_k=1:99
-    the_cross_over_probability(k_k)=0.01*k_k;
+the_cross_over_probability=zeros(0,999);
+for k_k=1:999
+    the_cross_over_probability(k_k)=0.001*k_k;
 end
 
 %the cross over probability formed
@@ -22,7 +22,7 @@ for tcop=1:numel(the_cross_over_probability)
     
     
 %see this line
-    for x=1:2
+    for x=1:30
         '$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-------iterations-------$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$'
         x
         the_indicator_matrix=zeros(h_size(1),h_size(2));
