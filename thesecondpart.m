@@ -1,6 +1,6 @@
-H=[ 1 1 0 1 0 0; 1 1 1 0 0 1 ; 0 1 1 0 1 0 ]
+H=full(alist2sparse('thefile'));
 h_size=size(H);
-the_codeword=[0 0 0 0 0 0]
+the_codeword=zeros(1,h_size(2));
 
 %form the vector for cross over probablilty
 the_cross_over_probability=zeros(0,99);
@@ -21,7 +21,7 @@ for tcop=1:numel(the_cross_over_probability)
     
     
 %see this line
-    for x=1:50
+    for x=1:10
         '$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-------iterations-------$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$'
         x
         the_indicator_matrix=zeros(h_size(1),h_size(2));
