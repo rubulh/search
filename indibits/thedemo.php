@@ -3,7 +3,7 @@
 	<body>
 		<form method="POST" action="">
 			<hr>
-			the markup enter text here
+			<pre>the markup enter text here</pre>
 			<hr>
 			<br/>
 			<textarea name="markuparea" rows="20" cols="75">
@@ -13,7 +13,7 @@
 			<input type="submit" name="submit" value="submit"/>
 			<br/>
 			<hr>
-			the html markdown
+			<pre>the html markdown</pre>
 			<hr>
 			<br/>
 			<textarea name="htmlarea" rows="20" cols="75" disabled="true">
@@ -26,7 +26,7 @@
 				?>
 			</textarea>
 			<hr>
-			how it looks in the browser
+			<pre>how it looks in the browser</pre>
 			<br/>
 			<fieldset>
 				<?php
